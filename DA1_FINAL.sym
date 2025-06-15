@@ -1,0 +1,217 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     LCD_ADDR
+018     lcd_total_rows
+019     lcd_total_columns
+01A     new_row_request
+01B     BACKLIGHT_LED
+01C     lcd_gotoxy.data
+01D-023 c_time
+024     second
+025     minute
+026     hour
+027     date
+028     month
+029     year
+02A-02B mytime
+02C-031 digits
+032-039 Temperature
+03A-041 Humidity
+042     T_Byte1
+043     T_Byte2
+044     RH_Byte1
+045     RH_Byte2
+046     CheckSum
+047-048 Temp
+049-04A RH
+04B     mode
+04C     gio
+04D     phut
+04E     giay
+04F     @PRINTF_D_683.P1
+04F     lcd_init.addr
+04F     @PRINTF_U_683.P1
+04F     @I2C_READ_1.P2
+04F     bcd_to_decimal.number
+04F     @PSTRINGCN_683.P1
+04F     updateDisplay.i
+04F-050 Read_Data.dht_data
+04F     RTC_Get.@SCRATCH1
+04F     Check_Response.@SCRATCH1
+04F     readDHT22.@SCRATCH1
+04F     @PSTRINGC_683.@SCRATCH1
+04F     MAIN.@SCRATCH1
+04F     @PSTRINGR_683.@SCRATCH1
+050     lcd_init.col
+050     @PRINTF_D_683.P1
+050     @PRINTF_U_683.P2
+050     @I2C_READ_1.@SCRATCH1
+050     bcd_to_decimal.@SCRATCH1
+050     updateDisplay.@SCRATCH1
+050     Check_Response.@SCRATCH2
+050     readDHT22.@SCRATCH2
+050     @PSTRINGC_683.@SCRATCH2
+050     @PSTRINGCN_683.@SCRATCH1
+050     @PSTRINGR_683.@SCRATCH2
+051     lcd_init.row
+051-052 @DIV1616.P1
+051     Read_Data.j
+051     shiftOut.data
+051     @I2C_READ_1.@SCRATCH2
+051     @PSTRINGCN_683.@SCRATCH2
+051     @PRINTF_D_683.@SCRATCH1
+052     lcd_init.i
+052     shiftOut.i
+052     Read_Data.@SCRATCH1
+052     @PRINTF_D_683.@SCRATCH2
+053-054 @DIV1616.P1
+053     lcd_init.@SCRATCH1
+053     shiftOut.@SCRATCH1
+053     Read_Data.@SCRATCH2
+053     @PRINTF_D_683.@SCRATCH3
+054     @PRINTF_D_683.@SCRATCH4
+055     @DIV88.P1
+055     LCD_PUTC.in_data
+055     @DIV1616.@SCRATCH1
+056     @DIV88.P1
+056     lcd_gotoxy.x
+057     lcd_gotoxy.y
+057     @DIV88.@SCRATCH1
+058     lcd_gotoxy.row
+059     lcd_gotoxy.column
+05A     lcd_gotoxy.row_addr
+05B     lcd_gotoxy.lcd_address
+05C     lcd_gotoxy.@SCRATCH1
+05D     lcd_send_byte.data
+05E     lcd_send_byte.type
+05F     lcd_send_byte.@SCRATCH1
+060     i2c_send_nibble.data
+061     i2c_send_nibble.type
+062     i2c_send_nibble.@SCRATCH1
+063     @I2C_WRITE_1.P1
+064     @delay_ms1.P1
+064     setup.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000096  LCD_INIT_STRING.call
+0000B0  LCD_INIT_STRING.data
+0000B4  seven_seg_digits.call
+0000CE  seven_seg_digits.data
+0000D8  @delay_ms1
+0000FE  setup
+000188  @const807.call
+000190  @const809.call
+0001A4  @const810.call
+0001BA  @const816.call
+0001CC  @const823.call
+0001DE  @const827.call
+0001E8  @const828.call
+0001F4  @const829.call
+00020A  @const830.call
+00021A  @const831.call
+00022C  @const832.call
+000238  @const833.call
+000246  @const835.call
+000250  @const836.call
+00027A  @I2C_WRITE_1
+0002E6  i2c_send_nibble
+00038A  lcd_send_byte
+0003F6  lcd_clear
+000416  lcd_init
+000520  Start_Signal
+00054E  Check_Response
+0005D2  Read_Data
+00067E  @DIV1616
+0006C0  readDHT22
+00088A  @I2C_READ_1
+0008F0  bcd_to_decimal
+00090A  RTC_Get
+000A12  lcd_gotoxy
+000A74  LCD_PUTC
+000AB6  @PSTRINGC_683
+000AD6  @DIV88
+000AFE  shiftOut
+000B42  updateDisplay
+000B80  updateTime
+000C36  @PSTRINGCN_683
+000C54  @PRINTF_D_683
+000CFE  @PRINTF_U_683
+000D64  @PSTRINGR_683
+000D88  hengio
+000F7A  MAIN
+000F7A  @cinit1
+000F9A  @cinit2
+
+Project Directory:
+    I:\Tai lieu zalo\Do an 1\
+
+Project Files:
+    DA1_FINAL.c                                             [16-Jun-25 01:00  CRC=AAEBD71C]
+    C:\Program Files (x86)\PICC\Devices\18f4550.h           [12-Nov-13 14:35  CRC=5337E248]
+    i2c_lcd.c                                               [16-Jun-25 01:00  CRC=0727844C]
+    ds1307.c                                                [16-Jun-25 01:00  CRC=125FE2AA]
+    C:\Program Files (x86)\PICC\Drivers\stdint.h            [30-Dec-08 09:01  CRC=9F7F640F]
+
+Source signature=56A9E878
+
+Units:
+    DA1_FINAL (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   DA1_FINAL.xsym
+    Errors:      DA1_FINAL.err
+    Ext Symbols: DA1_FINAL.esym
+    INHX32:      DA1_FINAL.hex
+    Symbols:     DA1_FINAL.sym
+    List:        DA1_FINAL.lst
+    Debug/COFF:  DA1_FINAL.cof
+    Project:     DA1_FINAL.ccspjt
+    Call Tree:   DA1_FINAL.tre
+    Statistics:  DA1_FINAL.STA

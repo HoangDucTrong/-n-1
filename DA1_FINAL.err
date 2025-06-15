@@ -1,0 +1,5 @@
+>>> Warning 216 "DA1_FINAL.c" Line 263(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 202 "I:\Tai lieu zalo\Do an 1\i2c_lcd.c" Line 102(13,17): Variable never used:   data
+      Memory usage:   ROM=14%      RAM=4% - 5%
+      0 Errors,  2 Warnings.
+Build Successful.
